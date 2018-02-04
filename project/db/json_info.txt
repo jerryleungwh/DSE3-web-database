@@ -1,0 +1,124 @@
++------------------------+----------------------------------+
+|iOS App                 |Server                            |
++========================+==================================+
+|design the structure and entries of JSON for communication |
++-----------------------------------------------------------+
+|View and animation      | oauth                            |
++------------------------+----------------------------------+
+|show POI with name and  | Database and add POI(capchta)    |
+|distance on ar and map  |                                  |
++------------------------+----------------------------------+
+|create cache locally    | form JSON and send               |
++------------------------+----------------------------------+
+
+
+request POI from current location. input: (location: float tuple, radius: int)
+{
+"num_POI":5,
+"POIS":[
+{id:"123",
+title:"Bank",
+longitude:"23.2348283",
+latitude:"129.120943",
+altitude:"123",
+},
+{id:999,
+...
+}
+]
+}
+request POI from string. input: (keyword: string)
+{
+"num_POI":5,
+"POIS":[
+{id:"123",
+title:"Bank",
+longitude:"23.2348283",
+latitude:"129.120943",
+altitude:"123",
+},
+{id:999,
+...
+}
+]
+}
+request info of POI. input: (id: string)
+{
+"id":"123",
+longitude:"23.2348283",
+latitude:"129.120943",
+altitude:"123",
+"name":"HK Bank",
+"info": "Holland Bank Check",
+"card_type": "info",
+"category": "Bank",
+"picURL": "https://www.img.com",
+"quiz": QuizObject
+}
+request trip from current location. input: (location: float tuple, radius: int)
+{
+"num_trips": 5
+"trips":[
+{"id": "T01",
+"title": "UST to Hang Hau",
+"info": "1 hr walk to Hang Hau."},
+...
+]
+}
+request trip from string. input: (keyword: string)
+{
+"num_trips": 5
+"trips":[
+{"id": "T01",
+"title": "UST to Hang Hau",
+"info": "1 hr walk to Hang Hau."},
+...
+]
+}
+request POI's in trip from id. input: (id: string)
+{
+"id": "T01",
+"title": "UST to Hang Hau",
+"info": "1 hr walk to Hang Hau."},
+"POI_sequence": ["123",...,"999"],
+"POIS":[
+{id:"123",
+title:"Bank",
+longitude:"23.2348283",
+latitude:"129.120943",
+altitude:"123",
+},
+{id:999,
+...
+}
+]
+}
+request enrolled trip from userID. input: (userID: string)
+{
+"userID": "haha",
+"trips":[
+{"tripID":"TO1",
+"status":"completed/enrolled"
+"title": "UST to Hang Hau",
+"info": "1 hr walk to Hang Hau."},
+}
+...
+]
+}
+request saved POI's from userID. input: (userID: string)
+{
+"userID": "haha",
+"num_POI":5,
+"POIS":[
+{id:"123",
+title:"Bank",
+longitude:"23.2348283",
+latitude:"129.120943",
+altitude:"123",
+"picURL": "https://www.img.com",
+},
+{id:999,
+...
+}
+]
+}

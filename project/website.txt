@@ -1,0 +1,9 @@
+http://www.bootstrapicons.com/index.htm?iconset=fontawesome&version=4.0.3
+
+https://www.elated.com/articles/cms-in-an-afternoon-php-mysql/
+
+https://www.tutorialrepublic.com/php-tutorial/php-mysql-insert-query.php
+
+https://github.com/jerryleungwh/DSE3-web-database/
+
+http://localhost/project/index.php
