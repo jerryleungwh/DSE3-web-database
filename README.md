@@ -5,11 +5,11 @@ Contributor: jerryleungwh, Cabitto
 
 ## Code
 Source code of the website:
-> DSE3-web-database/project
+> [DSE3-web-database/project](project)
 
 ## Code Reference
 POI database template:
-> DSE3-web-database/pdo-master
+> [DSE3-web-database/pdo-master](pdo-master)
 
 OAuth 2.0 template:
 > 
